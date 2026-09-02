@@ -120,6 +120,10 @@ section {
     justify-content: space-between;
 }
 
+.header-left {
+    margin-left: 30px;
+}
+
 .header-right {
     display: flex;
     align-items: center;
@@ -644,6 +648,9 @@ body.dark .delete-btn:hover {
     .header-content {
         min-height: 65px;
     }
+    .header-left {
+        margin-left: 15px;
+    }
 
     .main-nav {
         gap: 15px;
@@ -666,12 +673,13 @@ body.dark .delete-btn:hover {
     }
 
     .stats-card {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr;        
     }
 
     .stat {
         border-right: none;
         border-bottom: 1px solid var(--border);
+        margin-bottom: 8px;        
     }
 
     .stat:last-child {

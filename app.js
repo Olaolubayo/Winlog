@@ -115,7 +115,8 @@ function renderWins() {
                 newWinTextEl.textContent = newText;                
                 editTextArea.replaceWith(newWinTextEl);
                 editBtn.textContent = 'Edit';
-                editBtn.style.background = '#171717';
+                editBtn.style.background = 'black';    
+                editBtn.style.color = '#ededea';
             }            
         });
 
