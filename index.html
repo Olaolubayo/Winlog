@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Winlog helps you record and reflect on the small wins that make up your progress."
+    >
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Winlog — Small Wins. Real Progress.</title>
+    
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+
+        <div class="header-content wrapper">
+
+            <a href="/" class="logo" aria-label="Winlog home">
+                Winlog
+            </a>
+            <div class="header-right">
+                <nav class="main-nav" aria-label="Main navigation">
+                    <a href="#log-win">Log a Win</a>
+                    <a href="#recent-wins">My Wins</a>
+                    
+                </nav>
+
+                <button type="button" class="theme-toggle" 
+                        id="theme-toggle" 
+                        aria-label="Switch to dark mode"
+                        title="Toggle theme"
+                >
+                    <i class="fa-solid fa-moon" id="theme-icon"></i>
+                </button>            
+            </div>
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="hero"  style="border: 1x solid blue;">
+
+            <div class="container hero-content">
+
+                <p class="eyebrow">YOUR PROGRESS MATTERS</p>
+
+                <h1>
+                    Small wins.
+                    <span>Real progress.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Keep track of the little things you accomplish
+                    and see how they add up over time.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LOG WIN ================= -->
+        <section class="log-section" id="log-win">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <p class="section-label">TODAY</p>
+
+                    <h2>
+                        What's one small win
+                        you had today?
+                    </h2>
+
+                    <p>
+                        It doesn't have to be something big.
+                    </p>
+                </div>
+
+
+                <form class="win-form" id="win-form">
+
+                    <div class="form-group">
+
+                        <label for="win-input">
+                            Your win
+                        </label>
+
+                        <textarea
+                            id="win-input"
+                            name="win"
+                            rows="5"
+                            maxlength="250"
+                            placeholder="I finally understood..."
+                            required
+                        ></textarea>
+
+                        <div class="input-footer">
+
+                            <span id="char-count">
+                                0 / 250
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button type="submit" id="add-win-btn">
+                        Log Win
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATS ================= -->
+        <section class="stats-section">
+
+            <div class="container">
+
+                <div class="stats-card">
+
+                    <div class="stat">
+                        <span class="stat-number" id="total-wins">
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            Total Wins
+                        </span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-number" id="this-month">
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            This Month
+                        </span>
+                    </div>
+
+                    <div class="stat">
+                        <span class="stat-number" id="this-week">
+                            0
+                        </span>
+
+                        <span class="stat-label">
+                            This Week
+                        </span>
+                    </div>                    
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECENT WINS ================= -->
+        <section class="wins-section" id="recent-wins">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        YOUR JOURNEY
+                    </p>
+
+                    <h2>
+                        Recent wins
+                    </h2>
+
+                    <p>
+                        Every small step counts.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="wins-list"
+                    id="wins-list"
+                    aria-live="polite"                    
+                >                
+
+                    <!--
+                        JavaScript will insert
+                        win cards here.
+                    -->
+
+                    <div class="wins-pagination" id="wins-pagination">
+                            <button id="prev-page-btn">Prev</button>
+                            <button id="next-page-btn">Next</button>
+                    </div>
+                </div>
+
+                    <div class="empty-state" id="empty-state">
+
+                        <div class="empty-icon" aria-hidden="true">
+                            🌱
+                        </div>
+
+                        <h3>
+                            No wins logged yet.
+                        </h3>
+
+                        <p>
+                            Your first win is waiting.
+                        </p>
+
+                    </div>
+                
+            </div>
+
+        </section>
+
+
+        <!-- ================= REFLECTION ================= -->
+        <section class="reflection-section">
+
+            <div class="container">
+
+                <div class="reflection-card">
+
+                    <p class="section-label">
+                        LOOKING BACK
+                    </p>
+
+                    <h2>
+                        Your progress is bigger
+                        than you think.
+                    </h2>
+
+                    <p id="reflection-text">
+                        <i>Every completed month unlocks a reflection. Keep logging, and check back when one closes.</i>                       
+                    </p>
+
+                    <button
+                        type="button" id="reflection-btn"
+                        disabled                        
+                    >
+                        View Reflection
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+
+        <div class="container footer-content">
+
+            <p>
+                © 2026 Winlog
+            </p>
+
+            <p>
+                Small wins. Real progress.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="app.js"></script>
+
+</body>
+</html>
