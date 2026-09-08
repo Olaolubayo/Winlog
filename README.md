@@ -16,7 +16,8 @@ Instead of only looking at big milestones, you can record your everyday wins and
 
 ### Dashboard
 
-![Winlog Dashboard](screenshots/home.png)
+![Winlog Dashboard](screenshots/Home Pg - darkmode.jpg)
+![Winlog Dashboard](<screenshots/Home Pg(light mode).jpg>)
 
 ### Your Wins
 
