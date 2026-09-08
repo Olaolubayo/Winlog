@@ -21,7 +21,7 @@ Instead of only looking at big milestones, you can record your everyday wins and
 
 ### Your Wins
 
-![Winlog Wins - lightmode](screenshots/Win record - lightMode.jpg)
+![Winlog wins](<screenshots/RecentWins record.jpg>)
 
 ### Monthly Reflection
 
