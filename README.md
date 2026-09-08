@@ -161,6 +161,7 @@ Some features that could eventually make Winlog even more useful:
 ---
 
 ## 📄 License
+Built by [Olubayo](https://github.com/Olaolubayo).
 
 This project is open source and available under the [MIT License](LICENSE).
 
